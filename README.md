@@ -3,7 +3,7 @@
 
 # IdentityNow Rule Validator
 
-Date: 2020-0110
+Date: 2020-01-10
 
 Author: Neil McGlennon
 
