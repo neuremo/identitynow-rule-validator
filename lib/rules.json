@@ -1,0 +1,228 @@
+[{
+        "pattern": "System\\.(out|err)\\.print",
+        "message": "Remove any System.out configurations in favor of logging statements.",
+        "type": "warning"
+    },
+    {
+        "pattern": "\\.printStackTrace\\(",
+        "message": "Detected instances of printStackTrace(...). Remove this reference.",
+        "type": "warning"
+    },
+    {
+        "pattern": "public static",
+        "message": "Remove references to 'static' in methods. This can cause unexpected behavior.",
+        "type": "warning"
+    },
+    {
+        "pattern": "(<Source>)((?!<\\!\\[CDATA\\[).)*\\s?$",
+        "message": "Correct tag to be <Source><![CDATA[",
+        "type": "warning"
+    },
+    {
+        "pattern": "^(\\s)?(\\<\\/Source\\>)",
+        "message": "Correct tag to be ]]></Source>",
+        "type": "warning"
+    },
+    {
+        "pattern": "&gt;",
+        "message": "Detected instances of '&gt;' Convert to '>'.",
+        "type": "warning"
+    },
+    {
+        "pattern": "&lt;",
+        "message": "Detected instances of '&lt;' Convert to '<'.",
+        "type": "warning"
+    },
+    {
+        "pattern": "&amp;",
+        "message": "Detected instances of '&amp;' Convert to '&'.",
+        "type": "warning"
+    },
+    {
+        "pattern": "context\\.decrypt(\\s)?\\(",
+        "message": "Remove references to 'decrypt'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.commitTransaction(\\s)?\\(",
+        "message": "Remove references to 'commitTransaction'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.saveObject(\\s)?\\(",
+        "message": "Remove references to 'saveObject'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.authenticate(\\s)?\\(",
+        "message": "Remove references to 'authenticate'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.close(\\s)?\\(",
+        "message": "Remove references to 'close'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.decache(\\s)?\\(",
+        "message": "Remove references to 'decache'. This is not allowed.",
+        "type": "error"
+    },
+
+    {
+        "pattern": "context\\.encrypt(\\s)?\\(",
+        "message": "Remove references to 'encrypt'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.getJdbcConnection(\\s)?\\(",
+        "message": "Remove references to 'encrypt'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.impersonate(\\s)?\\(",
+        "message": "Remove references to 'impersonate'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.importObject(\\s)?\\(",
+        "message": "Remove references to 'importObject'. This is not allowed.",
+        "type": "error"
+    },
+
+    {
+        "pattern": "XMLObjectFactory\\.getInstance()\\.toXml\\(*\\)",
+        "message": "Remove references to XMLObjectFactory.getInstance().toXml(...).",
+        "type": "error"
+    },
+    {
+        "pattern": "\\.toXml(\\s)?\\(*\\)",
+        "message": "Remove references to 'toXml'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "Thread\\.",
+        "message": "Remove references to 'Thread'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "Runnable\\.",
+        "message": "Remove references to 'Runnable'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.lockObject(\\s)?\\(",
+        "message": "Remove references to 'lockObject'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.lockObjectById(\\s)?\\(",
+        "message": "Remove references to 'lockObjectById'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.lockObjectByName(\\s)?\\(",
+        "message": "Remove references to 'lockObjectByName'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.notify(\\s)?\\(",
+        "message": "Remove references to 'notify'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.notifyAll(\\s)?\\(",
+        "message": "Remove references to 'notifyAll'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.printStatistics(\\s)?\\(",
+        "message": "Remove references to 'printStatistics'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.reconnect(\\s)?\\(",
+        "message": "Remove references to 'reconnect'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.removeObject(\\s)?\\(",
+        "message": "Remove references to 'removeObject'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.removeObjects(\\s)?\\(",
+        "message": "Remove references to 'removeObjects'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.rollbackTransaction\\(",
+        "message": "Remove references to 'rollbackTransaction'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.runRule(\\s)?\\(",
+        "message": "Remove references to 'runRule'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.runScript(\\s)?\\(",
+        "message": "Remove references to 'runScript'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "context\\.sendEmailNotification(\\s)?\\(",
+        "message": "Remove references to 'sendEmailNotification'. This is not allowed.",
+        "type": "error"
+    },
+    {
+        "pattern": "TimeZone\\.setTimeZone\\(",
+        "message": "Setting TimeZones is not supported.",
+        "type": "error"
+    },
+    {
+        "pattern": "identity\\.getLinks(\\s)?\\(",
+        "message": "The function 'getLinks' is deprecated.  Use an identity search instead.",
+        "type": "error"
+    },
+    {
+        "pattern": "^(\\s)?(<Rule)(.*?)(type=)('|\")(ResourceObjectCustomization)('|\")",
+        "message": "Unsupported Rule Type: ResourceObjectCustomization rules are not supported, and cannot be submitted.",
+        "type": "error"
+    },
+    {
+        "pattern": "^(\\s)?(<Rule)(.*?)(type=)('|\")(Integration)('|\")",
+        "message": "Unsupported Rule Type: Integration rules are not supported. Consider implementation of a BeforeProvisioning rule instead.",
+        "type": "error"
+    },
+    {
+        "pattern": "^(\\s)?(<Rule)(.*?)(type=)('|\")(?!(IdentityAttribute|AttributeGenerator|AttributeGeneratorFromTemplate|Correlation|ManagerCorrelation|BeforeProvisioning|ConnectorAfterCreate|ConnectorAfterModify|BuildMap|JDBCBuildMap|JDBCProvisioning|SAPBuildMap|SapHrOperationProvisioning|WebServiceBeforeOperation|WebServiceAfterOperation))('|\")",
+        "message": "Unsupported Rule Type: This type of rule is not supported. See the IdentityNow Rule Guide for more details on supported rules.",
+        "type": "error"
+    },
+    {
+        "pattern": "^(\\s)?(<Rule)(.*?)(type=)('|\")(CertificationExclusion)('|\")",
+        "message": "Deprecated Rule Type: CertificationExclusion rules are deprecated.  Consider configuration via certification campaign filters instead.",
+        "type": "warning"
+    },
+    {
+        "pattern": "^(\\s)?(<Rule)(.*?)(type=)('|\")(IdentitySelector)('|\")",
+        "message": "Deprecated Rule Type: IdentitySelector rules are deprecated.  Consider configuration via rule assignment criteria instead.",
+        "type": "warning"
+    },
+    {
+        "pattern": "(context\\.)(getObjectByName|getObjectById|getObjects|getObject)(.*?)(\\s)?(\\()+(\\s)?(?!((\\s)?(sailpoint\\.object\\.)?(Identity|Link)))",
+        "message": "Cannot get objects other than sailpoint.object.Identity or sailpoint.object.Link objects.",
+        "type": "error"
+    },
+    {
+        "pattern": "Log4j",
+        "message": "Do not declare your own loggers.",
+        "type": "error"
+    },
+    {
+        "pattern": "(context\\.search)(\\s)?(\\()+(\\s)?(?!((\\s)?(sailpoint\\.object\\.)?(Identity|Link)))",
+        "message": "Only sailpoint.object.Identity or sailpoint.object.Link objects are searchable.",
+        "type": "error"
+    }
+]
