@@ -81,6 +81,17 @@ $ ruby -v
 ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-darwin16]
 ```
 
+- Install the **Colorize** gem:
+
+```bash
+$ gem install colorize
+Successfully installed colorize-0.8.1
+Parsing documentation for colorize-0.8.1
+Done installing documentation for colorize after 0 seconds
+1 gem installed
+```
+
+
 
 ###Installation and Updates
 

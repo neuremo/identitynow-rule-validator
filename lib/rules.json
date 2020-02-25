@@ -76,7 +76,7 @@
     },
     {
         "pattern": "context\\.getJdbcConnection(\\s)?\\(",
-        "message": "Remove references to 'encrypt'. This is not allowed.",
+        "message": "Remove references to 'getJdbcConnection'. This is not allowed.",
         "type": "error"
     },
     {

@@ -38,6 +38,8 @@ class IdentityNowRuleValidator
 
     self.report_findings
 
+    return @@findings
+
   end
 
   def self.validate_files( files )
@@ -58,6 +60,8 @@ class IdentityNowRuleValidator
 
     self.report_findings
 
+    return @@findings
+
   end
 
   def self.validate_file( file )
@@ -69,6 +73,8 @@ class IdentityNowRuleValidator
     self.analyze_file( file )
 
     self.report_findings
+
+    return @@findings
 
   end
 
@@ -143,31 +149,48 @@ class IdentityNowRuleValidator
   def self.report_findings
 
     #
-    # Iterate through all of our findings.
+    # If there are no findings, then we're good.  Display a success message.
     #
-    @@findings.each do |finding|
+    if @@findings.nil? || @@findings.empty?
+
+      puts "\n\t#{"Success".green}: No issues found!\n\n"
+
+    #
+    # We have some findings to show.
+    #
+    else
 
       #
-      # Output the file header
+      # Iterate through all of our findings.
       #
-      if ( finding[:file] != @@previousFile )
-        puts File.dirname( finding[:file] ) + "\n"
-        puts File.basename( finding[:file] ).bold + "\n\n"
+      @@findings.each do |finding|
+
+        #
+        # Output the file header
+        #
+        if ( finding[:file] != @@previousFile )
+          puts File.dirname( finding[:file] ) + "\n"
+          puts File.basename( finding[:file] ).bold + "\n\n"
+        end
+
+        #
+        # Output the issue
+        #
+        puts "\tLine #{finding[:line]}: #{finding[:text][0..80].gsub(/\s\w+$/,'...').light_black}"
+        type = ( finding[:type] == "error" ) ? "Error".red : "Warning".yellow
+        puts "\t#{type}: #{finding[:message]}\n\n"
+
+        #
+        # Set this for the next iteration
+        #
+        @@previousFile = finding[:file]
+
       end
 
-      #
-      # Output the issue
-      #
-      puts "\tLine #{finding[:line]}: #{finding[:text][0..80].gsub(/\s\w+$/,'...').light_black}"
-      type = ( finding[:type] == "error" ) ? "Error".red : "Warning".yellow
-      puts "\t#{type}: #{finding[:message]}\n\n"
-
-      #
-      # Set this for the next iteration
-      #
-      @@previousFile = finding[:file]
-
     end
+
+
+
 
     #
     # Completion!

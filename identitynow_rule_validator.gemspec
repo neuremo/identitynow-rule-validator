@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.signing_key   = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
   spec.files         = Dir.glob("{bin,lib}/**/*")
   spec.require_paths = ["lib"]
-  spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_dependency "colorize"
+  spec.add_development_dependency "bundler", "~> 2.1.4"
   spec.add_development_dependency "rake", "~> 10.0"
 end
