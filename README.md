@@ -93,7 +93,7 @@ Done installing documentation for colorize after 0 seconds
 
 
 
-###Installation and Updates
+### Installation and Updates
 
 NOTE:  If using a Mac, the below commands will require you to use sudo to perform them.  To use sudo, simply put the term sudo in front of the command.  It will prompt you for your computer password if you haven't already authenticated in that terminal session.  Example: `sudo gem install identitynow_rule_validator`
 
