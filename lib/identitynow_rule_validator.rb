@@ -105,7 +105,7 @@ class IdentityNowRuleValidator
     #
     # Program Start / Version
     #
-    Program.start( "IdentityNow Rule Validator", "Neil McGlennon (neil.mcglennon@sailpoint.com)", "1.0.0b", "2020-01-21" )
+    Program.start( "IdentityNow Rule Validator", "Neil McGlennon (neil.mcglennon@sailpoint.com)", "1.0.1", "2020-05-12" )
 
   end
 
@@ -188,9 +188,6 @@ class IdentityNowRuleValidator
       end
 
     end
-
-
-
 
     #
     # Completion!
